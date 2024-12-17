@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <link rel="stylesheet" href="css/all.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+    <title>Document</title>
+</head>
+<body>
+  <div style="margin-left: 1200px;">
+    <a href="#"  id="by"><B><i class="fa-solid fa-user-plus in"></i></B></a>
+
+<a id="op" href="#"> <i class="fa-solid fa-chart-simple in"></i></a>
+    <a href="#" onclick="exportTableToExcel()">    <i class="fa-regular fa-file-excel in"></i></a>
+  </div>
+<div class="p0">
+<div class="p">
+<div style="width: 50%;background-color: rgb(191, 255, 0);height: 35px;margin-left: 25%; border: 2px solid black; text-align: center;font-size: 20px;">Arrival Propability</div>
+    <div class="sh">
+    <div class="sh1">Time Between Arrivals</div>
+    <div class="sh1">Probability</div>
+    <div class="sh1">Cumulative</div>
+    <div class="sh1" style="width: 66.6%;">Random Digit</div>
+
+    </div>
+    <div class="list">
+        <div  style="background-color: rgb(191, 255, 0);">(Minutes)</div>
+        <div  style="background-color: rgb(191, 255, 0);">(0.1)</div>
+        <div  style="background-color: rgb(191, 255, 0);" >Probability</div>
+        <div  style="background-color: rgb(191, 255, 0);">From</div>
+        <div  style="background-color: rgb(191, 255, 0);">To</div>
+    </div>
+    
+    <div class="list">
+        <div >1</div>
+        <div >0.125</div>
+        <div >0.125</div>
+        <div >0</div>
+        <div >125</div>
+    </div>
+        <div class="list">
+        <div >2</div>
+        <div >0.125</div>
+        <div >0.25</div>
+        <div >126</div>
+
+        <div >250</div>
+    </div>
+    
+        <div class="list">
+        <div>3</div>
+        <div >0.125</div> 
+        <div >0.375</div>
+
+        <div >251</div>
+        <div >375</div>
+
+    </div>
+    
+        <div class="list">
+        <div>4</div>
+        <div >0.125</div>
+        <div >0.5</div>
+        <div >376</div>
+        <div >500</div>
+
+    </div>
+    
+        <div class="list">
+        <div >5</div>
+        <div >0.125</div>
+        <div >0.625</div>
+        <div >501</div>
+        <div >625</div>
+
+    </div>
+    
+        <div class="list">
+        <div>6</div>
+        <div >0.125</div>
+        <div >0.75</div>
+        <div >626</div>
+        <div >750</div>
+
+    </div>
+    
+        <div class="list">
+        <div>7</div>
+        <div >0.125</div>
+        <div >0.875</div>
+        <div >751</div>
+        <div >875</div>
+
+    </div>
+
+    <div class="list">
+        <div >8</div>
+        <div >0.125</div>
+        <div >1</div>
+        <div >876</div>
+        <div >1000</div>
+    </div>    
+      <div class="list">
+        <div  style="background-color: rgb(191, 255, 0);" ># of Rows=</div>
+        <div  style="background-color: rgb(191, 255, 0);" >8</div>
+        <div  style="background-color: rgb(191, 255, 0);" >Expected time</div>
+        <div  style="background-color: rgb(191, 255, 0);" >4.5</div>
+
+        <div ></div>
+    </div>
+    </div>  
+
+
+
+<div class="p2">
+    <div style="width: 50%;background-color: rgb(191, 255, 0);height: 35px;margin-left: 25%; border: 2px solid black; text-align: center;font-size: 20px;">Service Propability</div>
+        <div class="sh">
+        <div class="sh1">Service Time   </div>
+        <div class="sh1">Probability</div>
+        <div class="sh1">Cumulative</div>
+        <div class="sh1" style="width: 66.6%;">Random Digit</div>
+    
+        </div>
+        <div class="list">
+            <div  style="background-color: rgb(191, 255, 0);">(Minutes)</div>
+            <div  style="background-color: rgb(191, 255, 0);">(0.1)</div>
+            <div  style="background-color: rgb(191, 255, 0);" >Probability</div>
+            <div  style="background-color: rgb(191, 255, 0);">From</div>
+            <div  style="background-color: rgb(191, 255, 0);">To</div>
+        </div>
+        
+        <div class="list">
+            <div >1</div>
+            <div >0.1</div>
+            <div >0.1</div>
+            <div >0</div>
+            <div >10</div>
+        </div>
+            <div class="list">
+            <div >2</div>
+            <div >0.2</div>
+            <div >0.3</div>
+            <div >11</div>
+            <div >30</div>
+    
+        </div>
+        
+            <div class="list">
+            <div>3</div>
+            <div >0.3</div> 
+            <div >0.6</div>
+            <div >31</div>
+            <div >60</div>
+        </div>
+        
+            <div class="list">
+            <div>4</div>
+            <div >0.25</div>
+            <div >0.85</div>
+            <div >61</div>
+            <div >85</div>
+    
+        </div>
+        
+            <div class="list">
+            <div >5</div>
+            <div >0.1</div>
+            <div >0.95</div>
+            <div >86</div>
+            <div >95</div>
+    
+        </div>
+        
+            <div class="list">
+            <div>6</div>
+            <div >0.05</div>
+            <div >1</div>
+            <div >96</div>
+            <div >100</div>
+    
+        </div>
+
+          <div class="list">
+            <div  style="background-color: rgb(191, 255, 0); height: 35pt;" >Expected <br> serv. time</div>
+            <div  style="background-color: rgb(191, 255, 0);" >4.5</div>
+        </div>
+        </div>  
+    </div>
+</div>
+     
+    <!-- <div style="margin-bottom: 20p;"></div> -->
+
+    <div class="p_QS">
+        <table id="dataTable" >
+<div class="sh"><tr >
+<th><div class="sh11">Customer No</div></th>
+<th><div class="sh11">Random.Digit</div></th>
+<th><div class="sh11">Interval Time</div></th>
+<th><div class="sh11" >Arr. Clock</div></th>
+<th><div class="sh11">Start Time </div></th>
+<th><div class="sh11">Random.Digit</div></th>   
+<th><div class="sh11">Serv.Duration</div></th>
+<th><div class="sh11">End Time</div></th>
+<th><div class="sh11">Cust.Waiting</div></th>
+<th><div class="sh11">Server time</div></th>
+<th><div class="sh11">Cust.Spent time</div></th>
+
+</tr>
+            </div>
+    
+
+    
+                <div id="sh1" style="display:none;"><tr id="yt1" style="display:none;">
+<th><div id="id_1"></div></th>
+<th><div id="id_ti1" ></div></th>
+<th><div id="id_c1"></div></th>
+<th><div  id="id_cl1"></div></th>
+<th><div id="id_p1" ></div></th>
+<th><div id="beg1" ></div></th>   
+<th><div id="id_t1"></div></th>
+<th><div id="end1"></div></th>
+<th><div id="st1" ></div></th>
+<th><div id="cs1"></div></th>
+<th><div id="cp1"></div></th>
+
+                  </tr></div>
+    
+                    <div id="sh2" style="display:none;"><tr id="yt2" style="display:none;">
+<th><div id="id_2"></div></th>
+<th><div id="id_ti2"></div></th>
+<th><div id="id_c2" ></div></th>
+<th><div id="id_cl2"></div></th>
+<th><div id="id_p2"></div></th>
+<th><div id="beg2"></div></th>   
+<th><div id="id_t2"></div></th>
+<th><div id="end2"></div></th>
+<th><div id="st2" ></div></th>
+<th><div id="cs2"></div></th>
+<th><div id="cp2"></div></th>
+
+                      </tr></div>
+    
+                        <div id="sh3" style="display:none;"><tr id="yt3" style="display:none;">
+<th><div id="id_3"></div></th>
+<th><div id="id_ti3"></div></th>
+<th><div id="id_c3"></div></th>
+<th><div  id="id_cl3"></div></th>
+<th><div id="id_p3"></div></th>
+<th><div id="beg3" ></div></th>   
+<th><div id="id_t3"></div></th>
+<th><div id="end3"></div></th>
+<th><div id="st3"></div></th>
+<th><div id="cs3"></div></th>
+<th><div id="cp3"></div></th>
+
+                          </tr></div>
+    
+                            <div id="sh4" style="display:none;"><tr id="yt4" style="display:none;">
+<th><div id="id_4"></div></th>
+<th><div id="id_ti4"></div></th>
+<th><div  id="id_c4"></div></th>
+<th><div id="id_cl4"></div></th>
+<th><div id="id_p4"></div></th>
+<th><div id="beg4"></div></th>   
+<th><div id="id_t4"></div></th>
+<th><div id="end4"></div></th>
+<th><div id="st4"></div></th>
+<th><div id="cs4"></div></th>
+<th><div id="cp4"></div></th>
+
+                              </tr></div>
+    
+                                <div id="sh5" style="display:none;"><tr id="yt5" style="display:none;">
+<th><div id="id_5"></div></th>
+<th><div id="id_ti5"></div></th>
+<th><div  id="id_c5"></div></th>
+<th><div id="id_cl5"></div></th>
+<th><div id="id_p5"></div></th>
+<th><div id="beg5"></div></th>   
+<th><div id="id_t5"></div></th>
+<th><div id="end5"></div></th>
+<th><div id="st5"></div></th>
+<th><div id="cs5"></div></th>
+<th><div id="cp5"></div></th>
+
+                                  </tr></div>
+                                    
+                                    <div id="sh6" style="display:none;"><tr id="yt6" style="display:none;">
+<th><div id="id_6"></div></th>
+<th><div id="id_ti6"></div></th>
+<th><div  id="id_c6"></div></th>
+<th><div id="id_cl6"></div></th>
+<th><div id="id_p6"></div></th>
+<th><div id="beg6"></div></th>   
+<th><div id="id_t6"></div></th>
+<th><div id="end6"></div></th>
+<th><div id="st6"></div></th>
+<th><div id="cs6"></div></th>
+<th><div id="cp6"></div></th>
+
+                                      </tr></div>
+    
+                                        <div  id="sh7" style="display:none;"><tr id="yt7" style="display:none;">
+<th><div id="id_7"></div></th>
+<th><div id="id_ti7"></div></th>
+<th><div  id="id_c7"></div></th>
+<th><div id="id_cl7"></div></th>
+<th><div id="id_p7"></div></th>
+<th><div id="beg7"></div></th>   
+<th><div id="id_t7"></div></th>
+<th><div id="end7"></div></th>
+<th><div id="st7" ></div></th>
+<th><div id="cs7"></div></th>
+<th><div id="cp7"></div></th>
+
+                                          </tr></div></table>
+                                        </div>   
+                                        <div id="mal" style="width: 94.3%;height: 450px;background-color: #ffffff ; margin-top: -400px;position: absolute;border: 2px solid black;margin-left: 2.9%;display: none;">
+                                          <div style="height: 400px;"><canvas id="myChart" width="300" height="100%"></canvas></div>
+                                        
+                                        
+                                        </div>
+                                          <!-- <a href="#"><button id="by"><b>Add</b> </button></a>
+                                          <button style="  width: 100px;
+                                          height: 30px;
+                                          background-color: #224bf0ce;
+                                          border: none;
+                                          border-radius: 8px;
+                                          border: 2px solid black;
+                                          margin-left: 50px;
+                                          margin-top: 5px;" onclick="exportTableToExcel()"><b>Excel</b> </button> -->
+
+    </div>   
+
+
+
+    
+      <script>
+        function exportTableToExcel() {
+          var table = document.getElementById("dataTable");
+    
+          var workbook = XLSX.utils.table_to_book(table, { sheet: "Sheet1" });
+    
+          workbook.Sheets["Sheet1"]["!cols"] = [
+            { wch: 15 }, 
+            { wch: 15 }, 
+            { wch: 15 }, 
+            { wch: 15 }, 
+            { wch: 15 }, 
+            { wch: 15 }, 
+            { wch: 15 }, 
+            { wch: 15 }, 
+            { wch: 15 }, 
+            { wch: 15 }, 
+            { wch: 15 }, 
+
+    
+          ];
+    
+          var sheet = workbook.Sheets["Sheet1"];
+          Object.keys(sheet).forEach((cell) => {
+            if (sheet[cell].s == null) sheet[cell].s = {}; 
+            sheet[cell].s = {
+              font: { bold: true }, 
+              fill: {
+                fgColor: { rgb: "FFFF00" }, 
+              },
+            };
+          });
+    
+          XLSX.writeFile(workbook, "table.xlsx");
+        }
+      </script>
+    <script src="java/main_js.js"></script>
+</body>
+</html>
